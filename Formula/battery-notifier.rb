@@ -6,10 +6,10 @@ class BatteryNotifier < Formula
   
   depends_on "terminal-notifier"
 
-  keg_only "because it is not needed"
+  # keg_only "because it is not needed"
 
   def install
-    # bin.install "battery-notifier"
+    bin.install "battery-notifier"
   end
 
   def caveats
