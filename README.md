@@ -1,5 +1,5 @@
 # homebrew-LucaAngioloni
-My personal home-brew Tap
+My personal Homebrew Tap
 
 ## How to add the tap
 
