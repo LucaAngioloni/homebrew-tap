@@ -9,8 +9,9 @@ class BatteryNotifier < Formula
   # keg_only "because it is not needed"
 
   def install
+    system "chmod", "+x", "#{prefix}/battery-notifier.sh"
     prefix.install "battery-notifier.sh"
-    # system "chmod", "+x", "#{prefix}/battery-notifier.sh"
+    prefix.install_metafiles
     # system "ln", "#{prefix}/battery-notifier.sh", "/usr/local/bin/battery-notifier"
     # system "ln", "#{prefix}/battery.png", "/usr/local/bin/battery.png"
   end
@@ -26,7 +27,7 @@ class BatteryNotifier < Formula
 
   plist_options :startup => true
 
-  def plist; <<-EOS.undent
+  def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
