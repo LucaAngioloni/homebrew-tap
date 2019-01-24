@@ -6,19 +6,19 @@ class BatteryNotifier < Formula
   
   depends_on "terminal-notifier"
 
-  keg_only "Because it is not needed"
+  keg_only "for this deamon there is no point in linking the script. It doesn't make sense to call it from the terminal once."
 
   def install
     prefix.install "battery-notifier.sh"
     prefix.install "battery.png"
-    prefix.install_metafiles
+    # prefix.install_metafiles
     system "chmod", "+x", "#{prefix}/battery-notifier.sh"
     # system "ln", "#{prefix}/battery-notifier.sh", "/usr/local/bin/battery-notifier"
     # system "ln", "#{prefix}/battery.png", "/usr/local/bin/battery.png"
   end
 
   def caveats
-    "Use brew services to start and stop the daemon: \nbrew services start battery-notifier"
+    "Use brew services to start and stop the daemon: \nbrew services start battery-notifier\n\nDon't use sudo, even if homebrew suggests you to do it. There is no need."
   end
 
   test do
