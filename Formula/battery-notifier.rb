@@ -6,7 +6,7 @@ class BatteryNotifier < Formula
   
   depends_on "terminal-notifier"
 
-  keg_only "because it is not needed"
+  keg_only "Because it is not needed"
 
   def install
     prefix.install "battery-notifier.sh"
@@ -18,7 +18,7 @@ class BatteryNotifier < Formula
   end
 
   def caveats
-    "Use brew services to start and stop the daemon"
+    "Use brew services to start and stop the daemon: \nbrew services start battery-notifier"
   end
 
   test do
@@ -39,7 +39,7 @@ class BatteryNotifier < Formula
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>#{prefix}/battery-notifier</string>
+            <string>#{prefix}/battery-notifier.sh</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
