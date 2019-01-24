@@ -6,10 +6,11 @@ class BatteryNotifier < Formula
   
   depends_on "terminal-notifier"
 
-  # keg_only "because it is not needed"
+  keg_only "because it is not needed"
 
   def install
     prefix.install "battery-notifier.sh"
+    prefix.install "battery.png"
     prefix.install_metafiles
     system "chmod", "+x", "#{prefix}/battery-notifier.sh"
     # system "ln", "#{prefix}/battery-notifier.sh", "/usr/local/bin/battery-notifier"
