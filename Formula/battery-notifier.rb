@@ -9,9 +9,10 @@ class BatteryNotifier < Formula
   # keg_only "because it is not needed"
 
   def install
-    system "chmod", "+x", "#{prefix}/battery-notifier"
-    system "ln", "#{prefix}/battery-notifier", "/usr/local/bin/battery-notifier"
-    system "ln", "#{prefix}/battery.png", "/usr/local/bin/battery.png"
+    prefix.install "battery-notifier.sh"
+    # system "chmod", "+x", "#{prefix}/battery-notifier.sh"
+    # system "ln", "#{prefix}/battery-notifier.sh", "/usr/local/bin/battery-notifier"
+    # system "ln", "#{prefix}/battery.png", "/usr/local/bin/battery.png"
   end
 
   def caveats
