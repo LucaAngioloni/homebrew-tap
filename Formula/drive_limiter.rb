@@ -6,11 +6,13 @@ class DriveLimiter < Formula
   
   depends_on "cpulimit"
 
+  keg_only "for this deamon there is no point in linking the script. It doesn't make sense to call it from the terminal once."
+
   def install
     prefix.install "drive_limiter.sh"
     # prefix.install_metafiles
     system "chmod", "+x", "#{prefix}/drive_limiter.sh"
-    system "ln", "#{prefix}/drive_limiter.sh", "/usr/local/bin/drive_limiter"
+    # system "ln", "#{prefix}/drive_limiter.sh", "/usr/local/bin/drive_limiter"
   end
 
   def caveats
