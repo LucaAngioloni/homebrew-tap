@@ -16,7 +16,7 @@ class DriveLimiter < Formula
   end
 
   def caveats
-    "Use brew services to start and stop the daemon: \nbrew services start drive_limiter."
+    "Use brew services to start and stop the daemon: \nbrew services start drive_limiter"
   end
 
   test do
