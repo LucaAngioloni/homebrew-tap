@@ -1,8 +1,8 @@
 class DriveLimiter < Formula
   desc "drive_limiter is a formula that limits the amount of CPU used by Backup and Sync by Google Drive."
   homepage "https://github.com/LucaAngioloni/drive_limiter"
-  url "https://github.com/LucaAngioloni/drive_limiter/archive/v0.1.tar.gz"
-  sha256 "c1f45e34b242ec65712d6eaa6a865f69bd365c43bf85d4ab88a1973edd281b57"
+  url "https://github.com/LucaAngioloni/drive_limiter/archive/v0.2.tar.gz"
+  sha256 "74c71bded704dca344e96a03c49bc6527256b958fbbcc3953f8f896c341c2135"
   
   depends_on "cpulimit"
 
